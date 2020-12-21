@@ -1,7 +1,8 @@
-<div class="container">
-  <a href="/">Logo</a>
-
-  {% render 'layout-menu' %}
+<div class="header">
+  <a href="/" class="header__logo">
+    <img src="{{ section.settings['logo'] | img_url }}" alt="dullrazor Logo" />
+    dullrazor
+  </a>
 
   <div>
     {% if shop.customer_accounts_enabled %}
@@ -14,7 +15,9 @@
       {% endif %}
     {% endif %}
 
-    <a href="/cart">{{ 'layout.cart.title' | t }}</a>
+    <a class="header__cart" href="/cart" aria-label="Cart">
+      <img src="{{ section.settings['cart'] | img_url }}" alt="Cart Icon" />
+    </a>
   </div>
 </div>
 
@@ -23,8 +26,14 @@
   "name": "Header",
   "settings": [
     {
-      "type": "paragraph",
-      "content": "Add custom settings for this section. [Learn more](https://shopify.dev/docs/themes/settings)"
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "image_picker",
+      "id": "cart",
+      "label": "Cart image"
     }
   ]
 }

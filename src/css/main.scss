@@ -5,6 +5,12 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
-/* @import "my-file"; */
+@import "global";
+@import "header";
+@import "breakpoints";
+@import "colors";
+@import "mixins";
+@import "fonts";
+@import "pages/index";
 
 @import "tailwindcss/utilities";

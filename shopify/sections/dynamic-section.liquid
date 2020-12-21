@@ -1,33 +1,33 @@
-<div class="container">
-  <div>
-    <div>
-      <strong>Dynamic section</strong>
-    </div>
-
-    <div>
-      Text field value: <strong>{{ section.settings['my-text-field'] }}</strong>
-    </div>
-  </div>
+<div class="icon">
+  <a class="icon__cta" href="{{ section.settings['cta'] }}">
+    <img class="icon__img" src="{{ section.settings['image'] | img_url: '800x' }}" />
+    <p class="icon__text">{{ section.settings['title'] }}</p>
+  </a>
 </div>
 
 {% schema %}
 {
-  "name": "Dynamic section",
+  "name": "Icon",
     "settings": [
     {
-      "type": "paragraph",
-      "content": "Add custom settings for this section. [Learn more](https://shopify.dev/docs/themes/settings)"
+      "type": "image_picker",
+      "id": "image",
+      "label": "Icon image"
     },
     {
       "type": "text",
-      "id": "my-text-field",
-      "label": "Text field",
-      "default": "This is a default text"
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "cta",
+      "label": "Call To Action"
     }
   ],
   "presets": [
     {
-      "name": "Dynamic section",
+      "name": "Icon",
       "category": "text"
     }
   ]

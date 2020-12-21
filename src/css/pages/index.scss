@@ -1,0 +1,39 @@
+@import "../breakpoints";
+.template-index {
+  height: 100%;
+  
+  #shopify-section-footer {
+    display: none;
+  }
+
+  .icon {
+    text-align: center;
+
+    &__img {
+      width: 133px;
+      height: auto;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  #app {
+    height: 100vh;
+  } 
+
+  main {
+    padding: 70px 25px 70px 35px;
+    height: calc(100% - 70px);
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    background-image: url('../../shopify/assets/screensaver.static.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
